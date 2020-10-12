@@ -1,5 +1,5 @@
 export interface BlogPost {
-    url: string;
+    url?: string;
     urlToImage: string;
     description: string;
     title: string;
@@ -34,12 +34,7 @@ const BlogPreviewPost = ({ url, urlToImage, description, title }: BlogPost) => {
                     </div>
                 </header>
                 <footer className="blog_preview__footer">
-                    <a
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferer nofollow"
-                        className="blog_preview__button button is-link is-fullwidth"
-                    >
+                    <a href={url} className="blog_preview__button button is-link is-fullwidth">
                         Read More
                     </a>
                 </footer>

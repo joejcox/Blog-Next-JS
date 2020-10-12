@@ -4,12 +4,11 @@ import { BlogPost } from 'components/BlogPreviewPost/BlogPreviewPost';
 
 interface Posts {
     posts: BlogPost[];
-    maxDisplay: number;
+    maxDisplay?: number;
     imageOnly?: boolean;
 }
 
 const BlogPreview = ({ posts, maxDisplay }: Posts) => {
-    console.log(posts);
     return (
         <>
             <section className="section section__blog_feed">
