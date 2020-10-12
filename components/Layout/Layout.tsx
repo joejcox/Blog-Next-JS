@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ docTitle, children }: LayoutProps) => {
     return (
-        <div className={styles.wrapper}>
+        <div className="wrapper">
             <Head>
                 <title>{docTitle}</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -18,7 +18,7 @@ const Layout = ({ docTitle, children }: LayoutProps) => {
                     href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.css"
                 />
             </Head>
-            <div className={styles.wrapper__top}>
+            <div className="wrapper__top">
                 <nav className="navbar" role="navigation" aria-label="main navigation">
                     <div className="container">
                         <div className="navbar-menu">
@@ -49,10 +49,28 @@ const Layout = ({ docTitle, children }: LayoutProps) => {
                 {children}
             </div>
             <div className="wrapper__bottom">
-                <footer className={styles.site_footer}>
+                <footer className="site_footer">
                     <div className="container">Footer Info</div>
                 </footer>
             </div>
+            <style jsx>{`
+                .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    min-height: 100vh;
+                }
+
+                .wrapper__top {
+                    flex: 1;
+                }
+
+                .site_footer {
+                    padding: 1rem 0;
+                    background: #222;
+                    color: white;
+                }
+            `}</style>
         </div>
     );
 };
