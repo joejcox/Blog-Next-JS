@@ -27,20 +27,23 @@ const BlogPreview = ({ posts, maxDisplay }: Posts) => {
                     }
                 `}</style>
 
-                {maxDisplay !== -1 ? (
-                    <aside className="section has-text-centered">
-                        <div className="container">
-                            <Link href="/blog/">
-                                <a className="button blog_preview__more is-primary">View All</a>
-                            </Link>
-                        </div>
-                    </aside>
+                {maxDisplay ? (
+                    maxDisplay !== -1 ? (
+                        <aside className="section has-text-centered">
+                            <div className="container">
+                                <Link href="/blog/">
+                                    <a className="button blog_preview__more is-primary">View All</a>
+                                </Link>
+                            </div>
+                        </aside>
+                    ) : null
                 ) : null}
 
                 <style jsx>{`
                     .blog_preview__more {
                         padding: 1.8rem 3.6rem;
                         width: 20rem;
+                        max-width: 100%;
                         font-size: 1.2rem;
                         border-radius: 0;
                     }

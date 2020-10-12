@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import styles from 'assets/styles/layout.module.scss';
 
 interface LayoutProps {
     docTitle: string;

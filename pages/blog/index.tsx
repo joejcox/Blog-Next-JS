@@ -1,6 +1,5 @@
 import Layout from 'components/Layout/Layout';
 import BlogPreview from 'components/BlogPreview/BlogPreview';
-
 import { BlogPost } from 'components/BlogPreviewPost/BlogPreviewPost';
 
 interface Posts {
